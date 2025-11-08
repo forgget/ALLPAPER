@@ -2,10 +2,11 @@
 
 // Inicialização do Google Maps
 function initMap() {
-    // Coordenadas da loja (São Paulo, centro)
+    // Coordenadas da loja (Ribeirão Preto)
+    // Coordenadas aproximadas do centro de Ribeirão Preto
     const storeLocation = {
-        lat: -23.550520,
-        lng: -46.633308
+        lat: -21.1770,
+        lng: -47.8103
     };
 
     // Criando o mapa
@@ -36,7 +37,7 @@ function initMap() {
 
     // Adicionando uma janela de informação
     const infoWindow = new google.maps.InfoWindow({
-        content: '<div style="padding: 10px;"><strong>AllPaper</strong><br>Rua das Flores, 123<br>Centro - São Paulo, SP</div>'
+        content: '<div style="padding: 10px;"><strong>AllPaper</strong><br>Rua das Flores, 123<br>Centro - Ribeirão Preto, SP</div>'
     });
 
     // Abrindo a janela de informação ao clicar no marcador
