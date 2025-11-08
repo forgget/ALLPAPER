@@ -870,7 +870,6 @@ body {
 }
 
 .visit-store {
-    background: linear-gradient(135deg, #20b2aa, #ff69b4);
     padding: 30px;
     border-radius: 15px;
     color: white;
@@ -883,6 +882,7 @@ body {
 }
 
 .visit-store p {
+    color: black;
     margin-bottom: 20px;
     line-height: 1.6;
     opacity: 0.9;
