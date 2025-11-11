@@ -2,7 +2,7 @@ function initMap(){
     const storeLocation={lat:-21.1770,lng:-47.8103};
     const map=new google.maps.Map(document.getElementById('storeMap'),{zoom:15,center:storeLocation,styles:[{"featureType":"all","elementType":"geometry.fill","stylers":[{"saturation":"-100"}]},{"featureType":"poi","elementType":"labels","stylers":[{"visibility":"off"}]}]});
     const marker=new google.maps.Marker({position:storeLocation,map:map,title:'AllPaper - Papelaria Fofa',animation:google.maps.Animation.DROP});
-    const infoWindow=new google.maps.InfoWindow({content:'<div style="padding:10px;"><strong>AllPaper</strong><br>Rua das Flores, 123<br>Centro - Ribeirão Preto, SP</div>'});
+    const infoWindow=new google.maps.InfoWindow({content:'<div style="padding:10px;"><strong>AllPaper</strong><br>Rua Antônio Ache, 668<br>Centro - Ribeirão Preto, SP</div>'});
     marker.addListener('click',()=>{infoWindow.open(map,marker)});
 }
 window.addEventListener('load',initMap);
@@ -42,6 +42,9 @@ document.addEventListener('DOMContentLoaded',function(){
     const observerOptions={threshold:.1,rootMargin:'0px 0px -50px 0px'};const observer=new IntersectionObserver(function(entries){entries.forEach(entry=>{if(entry.isIntersecting){entry.target.style.opacity='1';entry.target.style.transform='translateY(0)'}})},observerOptions);const animatedElements=document.querySelectorAll('.value-card, .product-card, .category-card, .contact-card');animatedElements.forEach(element=>{element.style.opacity='0';element.style.transform='translateY(20px)';element.style.transition='opacity .45s ease, transform .45s ease';observer.observe(element)});
     updateActiveNavLink();
     const hearts=document.querySelectorAll('.product-heart');hearts.forEach(heart=>{heart.addEventListener('click',function(e){e.stopPropagation();const i=this.querySelector('i');if(i.classList.contains('far')){i.classList.remove('far');i.classList.add('fas');i.style.color='#ff69b4'}else{i.classList.remove('fas');i.classList.add('far');i.style.color='#ccc'}})});
+    // Prevent product-more clicks from triggering the parent product-info onclick (stop propagation)
+    const productMoreBtns = document.querySelectorAll('.product-more');
+    productMoreBtns.forEach(btn => { btn.addEventListener('click', function(e){ e.stopPropagation(); /* allow link navigation */ }); });
     const menuToggle=document.querySelector('.menu-toggle');const nav=document.querySelector('.nav');if(menuToggle&&nav){menuToggle.addEventListener('click',function(){nav.classList.toggle('open');menuToggle.classList.toggle('open')});window.addEventListener('resize',function(){if(window.innerWidth>768){nav.classList.remove('open');menuToggle.classList.remove('open')}})}
     document.addEventListener('keydown',function(e){if(e.key==='Escape'){closeProductPopup();const navOpen=document.querySelector('.nav.open');if(navOpen)navOpen.classList.remove('open')}});
     document.addEventListener('click',function(e){const popup=document.getElementById('productPopup');if(popup&&e.target===popup)closeProductPopup()});

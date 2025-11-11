@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AllPaper - Papelaria Fofa</title>
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/logo.full.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/logo.full.png">
+    <link rel="shortcut icon" href="/img/logo.full.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/logo.full.png">
+    <meta name="theme-color" content="#76c893">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
@@ -13,7 +19,7 @@
     <header class="header">
         <div class="container">
             <div class="logo">
-                <i class="fas fa-heart logo-icon" aria-hidden="true"></i>
+                <img src="img/logo.full.png" alt="AllPaper logo" class="logo-img">
                 <div class="logo-text">
                     <h1>AllPaper</h1>
                     <span>papelaria fofa</span>
@@ -128,33 +134,70 @@
                     <div class="products-grid">
                         <div class="product-card">
                             <div class="product-image"><div class="product-label label-pink">Mais Vendido</div><div class="product-heart"><i class="far fa-heart"></i></div><div class="product-placeholder pencils"></div></div>
-                            <div class="product-info" onclick="openProductPopup('Lápis de Cor Arco-Íris', 'Kit com 24 lápis de cor vibrantes de alta qualidade. Perfeitos para desenhos e trabalhos artísticos. Cores vivas e duradouras que estimulam a criatividade das crianças.')"><h4>Lápis de Cor Arco-Íris</h4><p>Kit com 24 lápis de cor vibrantes</p><div class="product-tag tag-pink">Arte</div><div class="product-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div></div>
+                            <div class="product-info" onclick="openProductPopup('Lápis de Cor Arco-Íris', 'Kit com 24 lápis de cor vibrantes de alta qualidade. Perfeitos para desenhos e trabalhos artísticos. Cores vivas e duradouras que estimulam a criatividade das crianças.')">
+                                <h4>Lápis de Cor Arco-Íris</h4>
+                                <p>Kit com 24 lápis de cor vibrantes</p>
+                                <div class="product-tag tag-pink">Arte</div>
+                                <div class="product-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                                <a href="#" class="product-more" aria-label="Ver mais"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
+                            </div>
                         </div>
 
                         <div class="product-card">
                             <div class="product-image"><div class="product-label label-blue">Novidade</div><div class="product-heart"><i class="far fa-heart"></i></div><div class="product-placeholder notebooks"></div></div>
-                            <div class="product-info" onclick="openProductPopup('Caderno Unicórnio', 'Caderno mágico com 96 folhas de alta qualidade. Capa dura com design exclusivo de unicórnio, ideal para estudantes que adoram um toque de fantasia em seus materiais escolares. Inclui adesivos decorativos.')"><h4>Caderno Unicórnio</h4><p>Caderno 96 folhas com design fofo</p><div class="product-tag tag-pink">Cadernos</div><div class="product-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div></div>
+                            <div class="product-info" onclick="openProductPopup('Caderno Unicórnio', 'Caderno mágico com 96 folhas de alta qualidade. Capa dura com design exclusivo de unicórnio, ideal para estudantes que adoram um toque de fantasia em seus materiais escolares. Inclui adesivos decorativos.')">
+                                <h4>Caderno Unicórnio</h4>
+                                <p>Caderno 96 folhas com design fofo</p>
+                                <div class="product-tag tag-pink">Cadernos</div>
+                                <div class="product-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                                <a href="#" class="product-more" aria-label="Ver mais"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
+                            </div>
                         </div>
 
                         <div class="product-card">
                             <div class="product-image"><div class="product-label label-green">Seguro</div><div class="product-placeholder crayons"></div></div>
-                            <div class="product-info" onclick="openProductPopup('Kit Giz de Cera', 'Kit com 12 cores de giz de cera especialmente desenvolvido para crianças. Produto atóxico e seguro, ideal para atividades artísticas e desenvolvimento da coordenação motora. Cores vibrantes que não mancham as mãos.')"><h4>Kit Giz de Cera</h4><p>Giz de cera atóxico 12 cores</p><div class="product-tag tag-pink">Arte</div><div class="product-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div></div>
+                            <div class="product-info" onclick="openProductPopup('Kit Giz de Cera', 'Kit com 12 cores de giz de cera especialmente desenvolvido para crianças. Produto atóxico e seguro, ideal para atividades artísticas e desenvolvimento da coordenação motora. Cores vibrantes que não mancham as mãos.')">
+                                <h4>Kit Giz de Cera</h4>
+                                <p>Giz de cera atóxico 12 cores</p>
+                                <div class="product-tag tag-pink">Arte</div>
+                                <div class="product-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                                <a href="#" class="product-more" aria-label="Ver mais"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
+                            </div>
                         </div>
 
                         <div class="product-card">
                             <div class="product-image"><div class="product-label label-orange">Promoção</div><div class="product-heart"><i class="far fa-heart"></i></div><div class="product-placeholder backpack"></div></div>
-                            <div class="product-info" onclick="openProductPopup('Mochila Escolar', 'Mochila escolar super resistente com design colorido e divertido. Possui compartimentos organizados, alças acolchoadas e material impermeável. Ideal para carregar material escolar com conforto e estilo.')"><h4>Mochila Escolar</h4><p>Mochila resistente e colorida</p><div class="product-tag tag-pink">Acessórios</div><div class="product-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div></div>
+                            <div class="product-info" onclick="openProductPopup('Mochila Escolar', 'Mochila escolar super resistente com design colorido e divertido. Possui compartimentos organizados, alças acolchoadas e material impermeável. Ideal para carregar material escolar com conforto e estilo.')">
+                                <h4>Mochila Escolar</h4>
+                                <p>Mochila resistente e colorida</p>
+                                <div class="product-tag tag-pink">Acessórios</div>
+                                <div class="product-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                                <a href="#" class="product-more" aria-label="Ver mais"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
+                            </div>
                         </div>
 
                         <div class="product-card">
                             <div class="product-image"><div class="product-label label-purple">Popular</div><div class="product-heart"><i class="far fa-heart"></i></div><div class="product-placeholder stickers"></div></div>
-                            <div class="product-info" onclick="openProductPopup('Adesivos Divertidos', 'Cartela com 50 adesivos temáticos coloridos e divertidos. Inclui designs variados como animais, estrelas, corações e unicórnios. Perfeitos para decorar cadernos, agendas e materiais escolares. Adesivos de alta qualidade que não deixam resíduos.')"><h4>Adesivos Divertidos</h4><p>Cartela com 50 adesivos temáticos</p><div class="product-tag tag-pink">Acessórios</div><div class="product-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div></div>
+                            <div class="product-info" onclick="openProductPopup('Adesivos Divertidos', 'Cartela com 50 adesivos temáticos coloridos e divertidos. Inclui designs variados como animais, estrelas, corações e unicórnios. Perfeitos para decorar cadernos, agendas e materiais escolares. Adesivos de alta qualidade que não deixam resíduos.')">
+                                <h4>Adesivos Divertidos</h4>
+                                <p>Cartela com 50 adesivos temáticos</p>
+                                <div class="product-tag tag-pink">Acessórios</div>
+                                <div class="product-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                                <a href="#" class="product-more" aria-label="Ver mais"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
+                            </div>
                         </div>
 
                         <div class="product-card">
                             <div class="product-image"><div class="product-label label-blue">Lavável</div><div class="product-placeholder markers"></div></div>
-                            <div class="product-info" onclick="openProductPopup('Canetinhas Coloridas', 'Conjunto com 18 canetinhas coloridas com tinta lavável. Ideal para desenhos e trabalhos escolares. Ponta macia que não machuca o papel, cores vivas e duradouras. A tinta sai facilmente das roupas com água e sabão.')"><h4>Canetinhas Coloridas</h4><p>Conjunto 18 canetinhas laváveis</p><div class="product-tag tag-pink">Arte</div><div class="product-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div></div>
+                            <div class="product-info" onclick="openProductPopup('Canetinhas Coloridas', 'Conjunto com 18 canetinhas coloridas com tinta lavável. Ideal para desenhos e trabalhos escolares. Ponta macia que não machuca o papel, cores vivas e duradouras. A tinta sai facilmente das roupas com água e sabão.')">
+                                <h4>Canetinhas Coloridas</h4>
+                                <p>Conjunto 18 canetinhas laváveis</p>
+                                <div class="product-tag tag-pink">Arte</div>
+                                <div class="product-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                                <a href="#" class="product-more" aria-label="Ver mais"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
+                            </div>
                         </div>
+                        <!-- WhatsApp quick link removed from this section (kept only in categories-grid) -->
                     </div>
                 </div>
             </div>
@@ -171,31 +214,39 @@
                     <div class="contact-info">
                         <div class="contact-card">
                             <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
-                            <h3>Nosso Endereço</h3>
-                            <p>Rua das Flores, 123</p>
-                            <p>Centro - Ribeirão Preto, SP</p>
-                            <p>CEP: 01234-567</p>
+                            <div class="contact-body">
+                                <h3>Nosso Endereço</h3>
+                                <p>Rua Antônio ache, 668</p>
+                                <p> Subsetor Sul 3 - Ribeirão Preto, SP</p>
+                                <p>CEP: 14021-670.</p>
+                            </div>
                         </div>
 
                         <div class="contact-card">
                             <div class="contact-icon"><i class="fas fa-phone"></i></div>
-                            <h3>Telefone</h3>
-                            <p>(16) 99620-1819</p>
-                            <span class="whatsapp-text">WhatsApp disponível</span>
+                            <div class="contact-body">
+                                <h3>Telefone</h3>
+                                <p>(16) 99620-1819</p>
+                                <span class="whatsapp-text">WhatsApp disponível</span>
+                            </div>
                         </div>
 
                         <div class="contact-card">
                             <div class="contact-icon"><i class="fas fa-envelope"></i></div>
-                            <h3>E-mail</h3>
-                            <p>@papelariafofa.maallpaper</p>
+                            <div class="contact-body">
+                                <h3>E-mail</h3>
+                                <p>@papelariafofa.maallpaper</p>
+                            </div>
                         </div>
 
                         <div class="contact-card">
                             <div class="contact-icon"><i class="fas fa-clock"></i></div>
-                            <h3>Horário de Funcionamento</h3>
-                            <p>Segunda a Sexta: 8h às 18h</p>
-                            <p>Sábado: 8h às 14h</p>
-                            <p>Domingo: Fechado</p>
+                            <div class="contact-body">
+                                <h3>Horário de Funcionamento</h3>
+                                <p>Segunda a Sexta: 8h às 18h</p>
+                                <p>Sábado: 8h às 14h</p>
+                                <p>Domingo: Fechado</p>
+                            </div>
                         </div>
                     </div>
 
@@ -205,8 +256,7 @@
                             <p>Acompanhe nossas novidades, promoções e dicas de criatividade infantil!</p>
                             <div class="social-buttons">
                                 <a href="#" class="social-btn instagram"><i class="fab fa-instagram"></i> Instagram</a>
-                                <a href="#" class="social-btn facebook"><i class="fab fa-facebook"></i> Facebook</a>
-                                <a href="#" class="social-btn whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                                <a href="https://w.app/qaztef" class="social-btn whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
                             </div>
                         </div>
 
@@ -215,15 +265,8 @@
                             <p>Venha conhecer pessoalmente nossa coleção de produtos fofos e deixe as crianças escolherem seus materiais favoritos!</p>
                             <div class="map-container">
                                 <div id="storeMap"></div>
-                                <a href="https://www.google.com/maps?q=Rua+das+Flores+123+Centro+Ribeirao+Preto+SP" target="_blank" class="btn btn-primary">Ver no Google Maps</a>
+                                <a href="https://www.google.com/maps?q=Rua+Ant%C3%B4nio+ache,+668+Centro+Ribeirao+Preto+SP" target="_blank" class="btn btn-primary">Ver no Google Maps</a>
                             </div>
-                        </div>
-
-                        <div class="directions">
-                            <h3>Como Chegar</h3>
-                            <div class="direction-item"><i class="fas fa-subway"></i><span>Metrô: Estação Centro (Linha Vermelha)</span></div>
-                            <div class="direction-item"><i class="fas fa-bus"></i><span>Ônibus: Linhas 100, 200, 300</span></div>
-                            <div class="direction-item"><i class="fas fa-car"></i><span>Estacionamento gratuito disponível</span></div>
                         </div>
                     </div>
                 </div>
@@ -248,8 +291,8 @@
                 <div class="footer-section">
                     <h4>Contato Rápido</h4>
                     <div class="footer-contact">
-                        <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i><span>Rua das Flores, 123 - Centro, Ribeirão Preto - SP</span></div>
-                        <div class="footer-contact-item"><i class="fas fa-phone"></i><span>(11) 99999-9999</span></div>
+                        <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i><span>Rua Antônio Ache, 668 - Centro, Ribeirão Preto - SP</span></div>
+                        <div class="footer-contact-item"><i class="fas fa-phone"></i><span>(16) 99620-1819</span></div>
                         <div class="footer-contact-item"><i class="fas fa-envelope"></i><span>contato@allpaper.com.br</span></div>
                         <div class="footer-contact-item"><i class="fas fa-clock"></i><span>Seg-Sex: 8h às 18h</span></div>
                     </div>

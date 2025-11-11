@@ -1,10 +1,11 @@
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;line-height:1.6;color:#333;background:linear-gradient(135deg,#e8f5e8 0%,#f0e8f5 100%);min-height:100vh}
 .container{max-width:1200px;margin:0 auto;padding:0 20px}
-.header{background:rgba(255,255,255,.95);backdrop-filter:blur(10px);position:fixed;top:0;left:0;right:0;z-index:1000;box-shadow:0 2px 20px rgba(0,0,0,.1)}
+.header{background:rgba(255, 245, 245, 0.95);backdrop-filter:blur(10px);position:fixed;top:0;left:0;right:0;z-index:1000;box-shadow:0 2px 20px rgba(0,0,0,.1)}
 .header .container{display:flex;justify-content:space-between;align-items:center;padding:12px 18px}
 .logo{display:flex;align-items:center;gap:10px}
 .logo-icon{color:#20b2aa;font-size:24px}
+.logo-img{height:40px;width:auto;display:block;border-radius:6px}
 .logo-text h1{color:#20b2aa;font-size:22px;font-weight:700;margin:0}
 .logo-text span{color:#ff69b4;font-size:13px}
 .menu-toggle{display:none;background:transparent;border:none;font-size:20px;color:#20b2aa;cursor:pointer;z-index:1600}
@@ -41,7 +42,7 @@ body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;line-height:1.6;col
 .value-card:hover{transform:translateY(-4px)}
 .value-icon{width:56px;height:56px;background:#e8f5e8;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:20px;color:#20b2aa}
 .value-card h3{color:#20b2aa;margin-bottom:10px;font-size:18px}.value-card p{color:#666;line-height:1.5}
-.history-section{display:flex;gap:24px;align-items:center;background:linear-gradient(135deg,#e8f5e8,#f0e8f5);padding:20px;border-radius:16px;margin-top:24px}
+.history-section{display:flex;gap:24px;align-items:center;background:linear-gradient(135deg,#f0e8f5,#f0e8f5);padding:20px;border-radius:16px;margin-top:24px}
 .history-content{flex:2}.history-content h2{color:#20b2aa;margin-bottom:12px;font-size:22px}.history-content p{color:#666;margin-bottom:10px;line-height:1.5}
 .quote-card{flex:1;background:#fff;padding:18px;border-radius:12px;text-align:center;box-shadow:0 5px 12px rgba(0,0,0,.06)}
 .quote-icons{display:flex;justify-content:center;gap:12px;margin-bottom:12px}.quote-icons i{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:16px}
@@ -58,7 +59,7 @@ body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;line-height:1.6;col
 .product-heart{position:absolute;top:10px;left:10px;color:#ccc;font-size:18px;cursor:pointer}.product-heart:hover{color:#ff69b4}
 .product-placeholder{width:80%;max-width:420px;height:auto;aspect-ratio:4/3;border-radius:10px}
 .pencils{background:linear-gradient(45deg,#ff6b6b,#4ecdc4,#45b7d1,#96ceb4,#feca57)}.notebooks{background:linear-gradient(45deg,#ff9a9e,#fecfef,#fecfef)}.crayons{background:linear-gradient(45deg,#a8edea,#fed6e3)}.backpack{background:linear-gradient(45deg,#667eea,#764ba2)}.stickers{background:linear-gradient(45deg,#f093fb,#f5576c)}.markers{background:linear-gradient(45deg,#4facfe,#00f2fe)}
-.visit-store{background:#fff5f8;padding:20px;border-radius:12px;text-align:center;margin-bottom:18px}
+.visit-store{background:#ffffff;padding:20px;border-radius:12px;text-align:center;margin-bottom:18px}
 .visit-store h3{color:#ff69b4;margin-bottom:10px;font-size:20px}.visit-store p{margin-bottom:12px;color:#666}
 .visit-store .map-container{max-width:100%;margin:12px auto;border-radius:12px;overflow:hidden;box-shadow:0 4px 8px rgba(255,105,180,.12)}
 .visit-store #storeMap{width:100%;height:320px;border-radius:8px;margin-bottom:12px}
@@ -71,6 +72,11 @@ body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;line-height:1.6;col
 .product-info h4{color:#333;margin-bottom:8px;font-size:16px}.product-info p{color:#666;margin-bottom:10px;font-size:14px}
 .product-tag{display:inline-block;padding:6px 10px;background:#ff69b4;color:#fff;border-radius:10px;font-size:12px;margin-bottom:10px}
 .product-rating{display:flex;gap:4px}.product-rating i{color:#ffd700;font-size:14px}
+.product-more{position:absolute;right:16px;bottom:16px;background:var(--site-accent,#25d366);color:#fff;padding:10px 16px;border-radius:24px;font-weight:700;text-decoration:none;box-shadow:0 6px 18px rgba(0,0,0,0.12);transition:transform .15s,box-shadow .15s}
+.product-more i{color:#fff !important;font-size:18px}
+.product-more:hover{transform:translateY(-4px);box-shadow:0 10px 26px rgba(0,0,0,0.16)}
+
+@media(max-width:480px){.product-more{right:12px;bottom:12px;padding:8px 12px;font-size:14px}.product-more i{font-size:16px}}
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:20px}
 .contact-info{display:flex;flex-direction:column;gap:14px}
 .contact-card{background:#fff;padding:18px;border-radius:12px;box-shadow:0 5px 12px rgba(0,0,0,.06);display:flex;align-items:flex-start;gap:12px}
@@ -107,6 +113,16 @@ body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;line-height:1.6;col
 .hero-section::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="stars" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="%23ffd700" opacity="0.3"/></pattern></defs><rect width="100" height="100" fill="url(%23stars)"/></svg>');opacity:.08;pointer-events:none}
 @media(max-width:768px){.hero{flex-direction:column;text-align:center;gap:28px;padding:18px 0}.hero-title{font-size:32px}.hero-buttons{justify-content:center;flex-direction:column;gap:12px}.hero-buttons .btn{width:100%;max-width:320px}.contact-grid{grid-template-columns:1fr}.footer-content{grid-template-columns:1fr;text-align:center}.nav{gap:12px;flex-wrap:wrap}.nav-link{font-size:15px;padding:10px 12px}.values-grid{grid-template-columns:1fr}.categories-grid{grid-template-columns:repeat(auto-fit,minmax(180px,1fr))}.products-grid{grid-template-columns:1fr}.history-section{flex-direction:column}.social-buttons{flex-direction:row;flex-wrap:wrap}.section{padding:40px 0}.hero-section{min-height:calc(100vh - 60px)}.menu-toggle{display:block}}
 @media(max-width:480px){.container{padding:0 14px}.hero-title{font-size:26px}.hero-description{font-size:15px}.btn{padding:10px 20px;font-size:14px}.page-header h2{font-size:22px}.image-frame{width:300px;height:200px;padding:16px}.visit-store #storeMap{height:260px}.popup-content{width:95%;padding:14px}}
+
+/* WhatsApp FAB helper: any container with .has-fab will show a FAB positioned bottom-right */
+.has-fab{position:relative}
+.has-fab .whatsapp-fab{position:absolute;right:18px;bottom:18px;background:#25d366;color:#fff;padding:12px 18px;border-radius:28px;font-weight:700;text-decoration:none;display:inline-flex;align-items:center;gap:8px;box-shadow:0 6px 18px rgba(0,0,0,0.12);transition:transform .15s,box-shadow .15s}
+.has-fab .whatsapp-fab:hover{transform:translateY(-4px);box-shadow:0 10px 26px rgba(0,0,0,0.16)}
+.has-fab .whatsapp-fab:active{transform:translateY(-1px)}
+
+@media(max-width:480px){
+    .has-fab .whatsapp-fab{right:12px;bottom:12px;padding:10px 14px;font-size:14px}
+}
 
 /* Mobile nav open state */
 .nav.open{position:fixed;top:72px;right:12px;left:12px;background:#fff;border-radius:12px;padding:12px 16px;box-shadow:0 8px 30px rgba(0,0,0,.12);flex-direction:column;gap:10px;z-index:1500}
@@ -145,20 +161,19 @@ body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;line-height:1.6;col
 }
 
 .category-pink {
-    background: linear-gradient(135deg, #ffb6c1, #ffc0cb);
+    background: linear-gradient(135deg, #c53349, #f3657d);
 }
 
 .category-green {
-    background: linear-gradient(135deg, #98fb98, #90ee90);
+    background: linear-gradient(135deg, #37cb37, #63e063);
 }
 
 .category-purple {
-    background: linear-gradient(135deg, #dda0dd, #ee82ee);
+    background: linear-gradient(135deg, #bd3dbd, #e962e9);
 }
 
 .category-yellow {
-    background: linear-gradient(135deg, #ffffe0, #fffacd);
-    color: #8b4513;
+    background: linear-gradient(135deg, #cdcd1b, #e7dc77);
 }
 
 .category-card h3 {
@@ -253,32 +268,56 @@ body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;line-height:1.6;col
 }
 
 .pencils {
-    background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4, #feca57);
+    
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8D5l_-XlB80auS1Cvrt93lPMvI2ACkeuTMQ&s);
+    width: 200px;
+    height: 200px;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .notebooks {
-    background: linear-gradient(45deg, #ff9a9e, #fecfef, #fecfef);
+    background-image: url(https://fuxicandocomarte.com.br/wp-content/uploads/2021/12/CAPA-UNICORNIO.png);
+    width: 200px;
+    height: 200px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .crayons {
-    background: linear-gradient(45deg, #a8edea, #fed6e3);
+    background-image: url(https://www.papelariazonca.com.br/media/12695/catalog/giz-de-cera-curto-15-cores-acrilex-1.jpg?size=256);
+    width: 200px;
+    height: 200px;
+    background-position: center;
 }
 
 .backpack {
-    background: linear-gradient(45deg, #667eea, #764ba2);
+    background-image: url(https://product-hub-prd.madeiramadeira.com.br/220647916/images/179f3b30-10fa-4831-80f1-a0a6a53b1c18omRodinhasCapivaraGVBolsas.jpg?width=256&canvas=1:1&bg-color=FFF);
+    width: 200px;
+    height: 200px;
+    background-position: center;
 }
 
 .stickers {
-    background: linear-gradient(45deg, #f093fb, #f5576c);
+    background-image: url(https://mimilon.com.br/_next/image?url=https%3A%2F%2Fae01.alicdn.com%2Fkf%2FSd289fc08f5e5417e9649f58d28bf8fcfN.jpg&w=256&q=75);
+    width: 200px;
+    height: 200px;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .markers {
-    background: linear-gradient(45deg, #4facfe, #00f2fe);
+    background-image: url(https://mimilon.com.br/_next/image?url=https%3A%2F%2Fae01.alicdn.com%2Fkf%2FS38fba42c38e544b9af78669258ef3b6dK.jpg&w=256&q=75);
+    width: 200px;
+    height: 200px;
+    background-position: center;
+    background-repeat: no;
 }
 
 /* Visit Store Styles */
 .visit-store {
-    background-color: #fff5f8;
+    background-color: #ffffff;
     padding: 30px;
     border-radius: 15px;
     text-align: center;
@@ -389,11 +428,7 @@ body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;line-height:1.6;col
     }
 }
 
-.product-info {
-    cursor: pointer;
-    transition: transform 0.2s ease;
-    padding: 20px;
-}
+:root{ --accent-green:var(--site-accent); }
 
 .product-info h4 {
     color: #333;
@@ -451,6 +486,10 @@ body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;line-height:1.6;col
     gap: 15px;
 }
 
+.contact-body {
+    flex: 1 1 auto;
+    min-width: 0;
+}
 .contact-icon {
     width: 50px;
     height: 50px;
@@ -790,7 +829,7 @@ body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;line-height:1.6;col
 
 /* Melhorias no hero */
 .hero-section {
-    background: linear-gradient(135deg, #e8f5e8 0%, #f0e8f5 100%);
+    background: linear-gradient(135deg, #e8f5e8 0%, #e8f5e8 100%);
     position: relative;
     overflow: hidden;
 }
@@ -908,3 +947,54 @@ body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;line-height:1.6;col
         padding: 20px;
     }
 }
+
+/* Theme overrides: use the green color requested by the user (#76c893) */
+:root{
+    --site-accent:#76c893;
+    --site-accent-dark:#0dff00;
+    --light-green-100:#f0e8f5;
+    --light-green-200:#f0e8f5;
+    --footer: #163320;
+}
+
+body{
+    background:linear-gradient(135deg,var(--light-green-200) 0%,var(--light-green-100) 100%) !important;
+}
+
+/* Primary accents */
+.logo-icon,.logo-text h1,.menu-toggle,.nav-link,.star-teal,.title-teal,.page-header h2,.value-card h3,.history-content h2,.social-card h3,.directions h3,.contact-card h3{color:var(--site-accent) !important}
+
+.btn-primary,.visit-store .btn.btn-primary{background:var(--site-accent) !important;color:#fff}
+.btn-primary:hover{background:var(--site-accent-dark) !important}
+
+/* Contact icon and footer */
+.contact-card:nth-child(1) .contact-icon{background:var(--site-accent) !important}
+.footer{background:var(--footer) !important}
+
+/* Ensure contrast where needed */
+.footer,.footer a{color:#fff}
+
+/* Apply the darker green to teal/green accent selectors */
+.logo-icon,
+.logo-text h1,
+.menu-toggle,
+.nav-link,
+.star-teal,
+.title-teal,
+.page-header h2,
+.value-card h3,
+.history-content h2,
+.social-card h3,
+.directions h3,
+.contact-card h3 {
+    color: var(--accent-green) !important;
+}
+
+/* Contact icon (first contact card) */
+.contact-card:nth-child(1) .contact-icon{
+    background: var(--accent-green) !important;
+}
+
+/* Decorative value icon backgrounds if present */
+.value-icon{color:var(--accent-green) !important}
+
