@@ -114,8 +114,78 @@ body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;line-height:1.6;col
 .nav-link{position:relative;padding:10px 14px;border-radius:18px;transition:all .25s}
 .hero-section{background:linear-gradient(135deg,#e8f5e8 0%,#f0e8f5 100%);position:relative;overflow:hidden}
 .hero-section::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="stars" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="%23ffd700" opacity="0.3"/></pattern></defs><rect width="100" height="100" fill="url(%23stars)"/></svg>');opacity:.08;pointer-events:none}
-@media(max-width:768px){.hero{flex-direction:column;text-align:center;gap:28px;padding:18px 0}.hero-title{font-size:32px}.hero-buttons{justify-content:center;flex-direction:column;gap:12px}.hero-buttons .btn{width:100%;max-width:320px}.contact-grid{grid-template-columns:1fr}.footer-content{grid-template-columns:1fr;text-align:center}.nav{gap:12px;flex-wrap:wrap}.nav-link{font-size:15px;padding:10px 12px}.values-grid{grid-template-columns:1fr}.categories-grid{grid-template-columns:repeat(auto-fit,minmax(180px,1fr))}.products-grid{grid-template-columns:1fr}.history-section{flex-direction:column}.social-buttons{flex-direction:row;flex-wrap:wrap}.section{padding:40px 0}.hero-section{min-height:calc(100vh - 60px)}.menu-toggle{display:block}}
+@media(max-width:768px){
+    .hero{flex-direction:column;text-align:center;gap:28px;padding:18px 0}
+    .hero-title{font-size:32px}
+    .hero-buttons{justify-content:center;flex-direction:column;gap:12px}
+    .hero-buttons .btn{width:100%;max-width:320px}
+    .contact-grid{grid-template-columns:1fr}
+    .footer-content{grid-template-columns:1fr;text-align:center}
+    /* Hide horizontal nav links on small screens; use hamburger */
+    .nav{display:none !important}
+    .nav.open{display:flex !important}
+    .nav-link{font-size:15px;padding:10px 12px}
+    .values-grid{grid-template-columns:1fr}
+    .categories-grid{grid-template-columns:repeat(auto-fit,minmax(180px,1fr))}
+    .products-grid{grid-template-columns:1fr}
+    .history-section{flex-direction:column}
+    .social-buttons{flex-direction:row;flex-wrap:wrap}
+    .section{padding:40px 0}
+    .hero-section{min-height:calc(100vh - 60px)}
+    .menu-toggle{display:block}
+    /* Style for opened nav overlay */
+    .nav.open{display:flex !important;position:fixed;top:60px;right:12px;left:12px;background:rgba(255,255,255,0.98);border-radius:12px;padding:14px 16px;box-shadow:0 10px 30px rgba(0,0,0,0.12);flex-direction:column;gap:10px;z-index:1500}
+    .nav.open .nav-link{padding:12px 10px;font-size:16px;color:#76c893}
+    .nav.open .nav-link.active{color:#ff69b4}
+    .menu-toggle{background:transparent;border:none;font-size:20px;color:#20b2aa;cursor:pointer;z-index:1600}
+}
 @media(max-width:480px){.container{padding:0 14px}.hero-title{font-size:26px}.hero-description{font-size:15px}.btn{padding:10px 20px;font-size:14px}.page-header h2{font-size:22px}.image-frame{width:300px;height:200px;padding:16px}.visit-store #storeMap{height:260px}.popup-content{width:95%;padding:14px}}
+
+/* Additional responsive rules for better mobile UX */
+@media (max-width:1024px){
+    .container{padding:0 18px}
+    .hero{gap:20px;padding:24px 0}
+    .hero-content{max-width:520px}
+    .hero-illustration, .image-frame{max-width:420px}
+}
+
+@media (max-width:768px){
+    .header{position:fixed;top:0;left:0;right:0;border-radius:0;width:100%;box-shadow:0 6px 20px rgba(0,0,0,.06)}
+    .header .container{padding:10px 16px}
+    .logo-img{height:34px}
+    .menu-toggle{display:block}
+    .nav{display:none}
+    .nav.open{display:flex !important;top:56px;left:8px;right:8px}
+    .hero{flex-direction:column-reverse;align-items:center;gap:18px}
+    .hero-content{text-align:center}
+    .hero-buttons{flex-direction:column;gap:12px;width:100%;align-items:center}
+    .hero-buttons .btn{width:90%;max-width:360px}
+    .hero-illustration{max-width:320px}
+    .products-grid{grid-template-columns:1fr}
+    .categories-grid{grid-template-columns:1fr}
+    .contact-grid{display:block}
+    .contact-card{margin-bottom:12px}
+    .footer-content{display:block;text-align:center}
+}
+
+@media (max-width:480px){
+    .logo-img{height:30px}
+    .hero-title{font-size:22px}
+    .hero-description{font-size:14px}
+    .hero-buttons .btn{padding:10px 18px}
+    .hero-illustration{max-width:280px}
+    .products-grid{grid-template-columns:1fr}
+    .product-card{padding:14px}
+    .product-image{height:auto}
+    .contact-card{padding:12px}
+    .visit-store #storeMap{height:220px}
+    .popup{align-items:flex-end}
+    .popup-content{width:100%;max-width:100%;border-radius:14px 14px 0 0;max-height:85vh;overflow:auto}
+}
+
+/* Ensure images are responsive generally */
+img{max-width:100%;height:auto;display:block}
+
 
 /* WhatsApp FAB helper: any container with .has-fab will show a FAB positioned bottom-right */
 .has-fab{position:relative}
@@ -128,7 +198,7 @@ body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;line-height:1.6;col
 }
 
 /* Mobile nav open state */
-.nav.open{position:fixed;top:72px;right:12px;left:12px;background:#fff;border-radius:12px;padding:12px 16px;box-shadow:0 8px 30px rgba(0,0,0,.12);flex-direction:column;gap:10px;z-index:1500}
+.nav.open{display:flex !important;position:fixed;top:72px;right:12px;left:12px;background:#fff;border-radius:12px;padding:12px 16px;box-shadow:0 8px 30px rgba(0,0,0,.12);flex-direction:column;gap:10px;z-index:1500}
 
 
 .quote-icons i:last-child {
